@@ -1,0 +1,62 @@
+.grid {
+  display: grid;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 2rem 0;
+  gap: 2rem;
+  grid-template-columns: var(--columns);
+}
+
+.pair-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.pair-card:hover {
+  background-color: var(--light-black);
+}
+
+.modal-container {
+  transition: all 0.1s;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: auto;
+}
+
+.all-info {
+  transition: all 0.1s;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.show {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.bold {
+  font-family: var(--bold);
+  font-weight: 500;
+}

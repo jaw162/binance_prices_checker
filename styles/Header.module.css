@@ -1,0 +1,46 @@
+.container {
+  height: 64px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: var(--columns);
+  align-items: center;
+  gap: 2rem;
+}
+
+.svg {
+  display: flex;
+  fill: var(--dark-yellow);
+  color: var(--dark-yellow);
+  align-items: center;
+}
+
+.svg p {
+  padding: 0 0.5rem;
+}
+
+.search-box {
+  background-color: var(--light-black);
+  height: 60%;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 400px) {
+  .search-box {
+    height: 50px;
+  }
+  .container {
+    height: 114px;
+  }
+}
+
+.search-box input {
+  height: 100%;
+  width: 100%;
+}
+
+.search-box svg {
+  padding: 0 0.5rem;
+}

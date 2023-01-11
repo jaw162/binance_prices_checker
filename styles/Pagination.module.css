@@ -1,0 +1,17 @@
+.buttons-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.buttons-container p {
+  padding: 0.5rem;
+}
+
+.buttons-container button {
+  cursor: pointer;
+}
+.buttons-container button:hover {
+  background-color: black;
+}

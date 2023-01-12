@@ -6,16 +6,7 @@ const useFilters = (arr: cryptoInfo[], filter: string) => {
   const lowerCase = filter.toLowerCase();
 
   return arr.filter((coin) => {
-    const keys = Object.keys(coin);
-
-    return keys.some((el) => {
-      if (Number(coin[el as keyof cryptoInfo])) return;
-      return (coin[el as keyof cryptoInfo] as string)
-        .toLowerCase()
-        .includes(lowerCase);
-    })
-      ? coin
-      : false;
+    return coin.symbol.toLowerCase().includes(lowerCase);
   });
 };
 

@@ -16,7 +16,7 @@ const Header = ({ setFilter }: { setFilter: (arg: string) => void }) => {
             const { value } = e.target;
             setFilter(value);
           }}
-          placeholder="Search"
+          placeholder="Search pairs..."
         />
       </form>
     </header>

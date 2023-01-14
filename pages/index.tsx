@@ -22,7 +22,7 @@ export default function Home() {
       {loaded ? (
         <>
           <Loader loaded={true} />
-          <Header setFilter={setFilter} pairs={filtered} />
+          <Header setFilter={setFilter} pairs={cryptos} />
           <DisplayPairs
             pairs={filtered}
             currentPage={currentPage}

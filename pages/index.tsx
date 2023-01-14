@@ -42,9 +42,10 @@ export default function Home() {
                     <button
                       style={
                         currentPage === i + 1
-                          ? { backgroundColor: "black", color: "white" }
+                          ? { backgroundColor: "black" }
                           : {}
                       }
+                      className={styles.button}
                       key={i}
                       onClick={() => setCurrentPage(i + 1)}
                     >

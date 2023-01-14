@@ -7,7 +7,7 @@ input,
 option {
   all: unset;
 }
-
+/* 
 ul,
 li,
 option,
@@ -20,7 +20,7 @@ div {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-}
+} */
 
 @font-face {
   font-family: "Helvetica_Neue_Bold";

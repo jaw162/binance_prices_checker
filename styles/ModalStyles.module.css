@@ -20,6 +20,11 @@
   background: var(--two-tone-dark);
 }
 
+.all-info li,
+.all-info p {
+  user-select: unset;
+}
+
 .all-info li:first-child {
   font-family: var(--bold);
 }

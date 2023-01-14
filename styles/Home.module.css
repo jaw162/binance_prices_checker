@@ -14,3 +14,11 @@
   cursor: pointer;
   border-radius: 3px;
 }
+
+.button {
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: black;
+}

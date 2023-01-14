@@ -14,7 +14,7 @@ declare module "cryptoInfo" {
     openPrice: string;
     highPrice: string;
     lowPrice: string;
-    volume: string;
+    volume: string | number;
     quoteVolume: string;
     openTime: number;
     closeTime: number;

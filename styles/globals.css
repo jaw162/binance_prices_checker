@@ -67,10 +67,12 @@ div {
   }
 }
 
-body {
+html {
   background: var(--two-tone-dark);
   color: rgb(234, 236, 239);
   font-family: var(--light);
+  padding: 0.2rem;
+  height: 100%;
 }
 
 button {

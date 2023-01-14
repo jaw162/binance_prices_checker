@@ -1,0 +1,39 @@
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 1rem 0 0 0;
+  height: 20px;
+}
+
+.grid-wrap {
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-auto-flow: column;
+  gap: 2rem;
+  width: fit-content;
+  position: absolute;
+  left: 100%;
+  animation: slide 15s linear 2s infinite normal backwards;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translate(-160%);
+  }
+}
+
+.pair {
+  width: 100%;
+}
+
+.pair,
+.pair li {
+  padding-right: 0.4rem;
+}

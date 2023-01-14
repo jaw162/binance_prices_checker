@@ -2,23 +2,9 @@
   display: grid;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 0;
+  padding: 1rem;
   gap: 2rem;
   grid-template-columns: var(--columns);
-}
-
-.pair-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 1rem;
-  box-shadow: var(--box-shadow);
-  cursor: pointer;
-  border-radius: 3px;
-}
-
-.pair-card:hover {
-  background-color: var(--light-black);
 }
 
 .modal-container {
@@ -54,6 +40,19 @@
 .hide {
   opacity: 0;
   visibility: hidden;
+}
+.pair-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1rem;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.pair-card:hover {
+  background-color: var(--light-black);
 }
 
 .bold {

@@ -11,23 +11,28 @@ const fetchPrices = async () => {
   });
 };
 
-const fetchHandler = (func: (arg: cryptoInfo[]) => void) => {
+const fetchHandler = (
+  func: (arg: cryptoInfo[]) => void,
+  isLoaded?: (arg: boolean) => void
+) => {
   fetchPrices()
     .then((res) => {
       func(res);
+      if (isLoaded) isLoaded(true);
     })
     .catch((err) => console.log(err));
 };
 
 export const useFetchPrices = () => {
   const [cryptos, setCryptos] = useState<cryptoInfo[]>([]);
+  const [loaded, setLoaded] = useState<boolean>(false);
 
   useEffect(() => {
-    fetchHandler(setCryptos);
+    fetchHandler(setCryptos, setLoaded);
     const interval = setInterval(() => {
       fetchHandler(setCryptos);
     }, 10000);
     return () => clearInterval(interval);
   }, []);
-  return cryptos;
+  return { cryptos, loaded };
 };

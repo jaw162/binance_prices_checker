@@ -1,10 +1,10 @@
 .pagination-and-per-page {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 2rem 0;
-  gap: 2rem;
+  padding: 1rem 0;
 }
 
 .per-page {
@@ -13,7 +13,4 @@
   padding: 0.5rem;
   cursor: pointer;
   border-radius: 3px;
-}
-
-.per-page option {
 }

@@ -49,6 +49,9 @@ const DisplayPairs = ({
         .slice(currentPage * perPage - perPage, currentPage * perPage)
         .map((el, index) => {
           const { symbol, volume, weightedAvgPrice } = el;
+          const formattedVolume = new Intl.NumberFormat("en-US").format(
+            Math.round(Number(volume))
+          );
           return (
             <ul
               className={styles["pair-card"]}
@@ -58,7 +61,7 @@ const DisplayPairs = ({
               key={`${el.symbol}` + `${index + 100}`}
             >
               <li className={styles.bold}>{symbol}</li>
-              <li>Volume: {volume}</li>
+              <li>Volume: {formattedVolume}</li>
               <li
                 className={styles.bold}
                 style={priceChange(el.lastPrice, el.weightedAvgPrice)}

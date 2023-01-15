@@ -34,14 +34,14 @@ const DisplayPairs = ({
       : setActiveTab({ symbol: pair, info: pairInfo });
   };
 
-  const handleCardClick = (e: React.MouseEvent, el: cryptoInfo) => {
-    const target = e.target as HTMLUListElement;
+  function handleCardClick(e: React.MouseEvent, el: cryptoInfo) {
+    const target = e.currentTarget;
     if (
       target.parentElement?.classList.contains(`${styles["pair-card"]}`) ||
       target.classList.contains(`${styles["pair-card"]}`)
     )
       updateState(el.symbol, el);
-  };
+  }
 
   return (
     <ul className={styles.grid}>
@@ -71,9 +71,7 @@ const DisplayPairs = ({
             </ul>
           );
         })}
-      {activeTab.symbol && (
-        <Modal pair={activeTab.info as cryptoInfo} onClick={setActiveTab} />
-      )}
+      {activeTab.info && <Modal pair={activeTab.info} onClick={setActiveTab} />}
     </ul>
   );
 };

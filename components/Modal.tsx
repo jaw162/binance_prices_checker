@@ -1,4 +1,4 @@
-import { cryptoInfo } from "cryptoInfo";
+import { cryptoInfo, stringKeys } from "cryptoInfo";
 import styles from "../styles/ModalStyles.module.css";
 import { activeTab } from "./DisplayPairs";
 
@@ -9,6 +9,9 @@ const Modal = ({
   pair: cryptoInfo;
   onClick: (arg: activeTab) => void;
 }) => {
+  const keys = Object.keys(pair);
+  const updatedPair: stringKeys = { ...pair };
+
   return (
     <div
       className={styles.container}
@@ -19,11 +22,11 @@ const Modal = ({
       }}
     >
       <ul className={styles["all-info"]}>
-        {Object.keys(pair).map((el, index) => {
+        {keys.map((el, index) => {
           return (
             <li className={styles.stat} key={index}>
               <p>{el}</p>
-              <p>{pair[el as keyof typeof pair]}</p>
+              <p>{updatedPair[el]}</p>
             </li>
           );
         })}

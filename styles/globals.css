@@ -7,20 +7,6 @@ input,
 option {
   all: unset;
 }
-/* 
-ul,
-li,
-option,
-select,
-div {
-  -webkit-tap-highlight-color: transparent;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-} */
 
 @font-face {
   font-family: "Helvetica_Neue_Bold";
@@ -36,7 +22,7 @@ div {
   --bold: "Helvetica_Neue_Bold", sans-serif;
   --light: "Helvetica_Neue_Light", sans-serif;
   --yellow: #fad338;
-  --dark-yellow: #f2bc07;
+  --dark-yellow: rgb(242, 188, 7);
   --light-black: #111110;
   --two-tone-dark: linear-gradient(#0b0e11, #0c0c0c);
   --box-shadow: 0 0 1px 1px var(--yellow);

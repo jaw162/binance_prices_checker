@@ -57,10 +57,14 @@ export default function Home() {
             </div>
             <div>
               <label htmlFor="perPage">Per Page:</label>
-              <select id="perPage" className={styles["per-page"]}>
-                <option onClick={() => setPerPage(30)}>30</option>
-                <option onClick={() => setPerPage(60)}>60</option>
-                <option onClick={() => setPerPage(90)}>90</option>
+              <select
+                id="perPage"
+                className={styles["per-page"]}
+                onChange={(e) => setPerPage(Number(e.target.value))}
+              >
+                <option value={30}>30</option>
+                <option value={60}>60</option>
+                <option value={90}>90</option>
               </select>
             </div>
           </aside>

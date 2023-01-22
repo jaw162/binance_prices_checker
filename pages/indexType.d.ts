@@ -22,7 +22,4 @@ declare module "cryptoInfo" {
     lastId: number;
     count: number;
   }
-  export interface stringKeys extends cryptoInfo {
-    [key: string]: number | string;
-  }
 }
